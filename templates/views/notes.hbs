@@ -1,0 +1,69 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/notes.css" />
+    <link rel="stylesheet" href="/css/notesarea.css" />
+    <title>DO-it | notes  </title>
+  </head>
+
+  <body>
+
+
+
+    <div class="container">
+
+      <div class="note-names">
+        <div class="search-bar" id="sticky">
+          <span><a href="/" class="goback"><i class="fas fa-arrow-left"></i></a></span>
+          <form action="" method="get">
+            <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="search"/>
+            <button type="submit" class="btn"><i class="fas fa-search" ></i></button>
+            <a href="#" class="add"><i class="far fa-plus-square"></i></a>
+          </form>
+        </div>
+        {{!-- <span><a href="/" class="goback"><i class="fas fa-arrow-left"></i></a></span> --}}
+
+        <div class="ideas">
+            {{#each data}}
+            <div class="idea">
+                <a href="/edit/{{this.id}}" class="title">{{this.idea}}</a><br>
+            </div>
+            {{/each}}
+        </div>
+
+
+      </div>
+
+      <div class="note-area">
+        <div class="icons-area">
+            <button type="submit" class="btn-icon"><i class="far fa-trash-alt"></i></button>
+            <button type="submit" class="btn-icon"><i class="fas fa-camera" ></i></button>
+            <button type="submit" class="btn-icon"><i class="fas fa-paint-brush"></i></button>
+        </div>
+
+        
+        <div>
+          {{#each data}}
+            <div>
+              <form action="/edit/{{this.id}}" method="post">
+                 <input type="text" class="title" value="{{this.idea}}" name="idea"><br>
+                 <textarea class="note" name="details" >{{this.details}}</textarea>
+                  <button type="submit" class="btn-icon"><i class="fas fa-save"></i></button>
+              </form>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

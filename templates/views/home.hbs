@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>DO-it | folders</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fline">
+            <p> <a href="/">Files</a> </p>
+            <div>
+              <form action="/search" method="POST">
+                 <input type="text" name="searchforhome" placeholder="Search..." autocomplete="off" id="search" class="search"/>
+                 <button type="submit" class="btn"><i class="fas fa-search" ></i></button>
+              </form>
+            </div>
+            <i class="fas fa-plus-square" id="open"></i>
+        </div>
+
+
+        <div class="ideas">
+            {{#each data}}
+            <div class="idea">
+                <a href="/edit/{{this.id}}" class="title">{{this.idea}}</a><br>
+                <a href="/{{this.id}}"><i class="far fa-trash-alt" id="icon"></i></a>
+            </div>
+            {{/each}}
+        </div>
+
+
+
+
+
+
+        {{!--
+        <!-- popup for input field --> --}}
+        <div class="popup-container" id="container">
+            <div class="popup">
+                <button id="close">x</button>
+                <h3 class="folder">Add note</h3>
+                <form action="/save" method="POST">
+                    <input type="text" name="idea" placeholder="title" id="title"><br>
+                    <textarea name="details" placeholder="note" id="note"></textarea><br>
+                    <button type="submit" id="button">Add</button>
+                </form>
+            </div>
+        </div>
+
+        {{!--
+        <!-- popup for delete file name -->
+        <!-- <div class="popup-container-for-delete" id="container-for-delete">
+            <div class="popup-for-delete">
+                <button id="close-for-delete">x</button>
+                <form action="" method="get">
+                    <button type="submit" class="button-for-delete delete" ><i class="fas fa-trash"></i> delete</button>
+                    <button type="submit" class="button-for-delete delete" ><i class="fas fa-ellipsis-h"></i> delete</button>
+                </form>
+            </div>
+        </div> --> --}}
+
+        {{!-- icons --}}
+        {{!-- <i class="fas fa-folder"></i> --}}
+
+    </div>
+
+
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

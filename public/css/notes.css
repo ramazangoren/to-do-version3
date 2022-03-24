@@ -1,0 +1,125 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica Neue, 'Courier New', Courier, monospace;
+}
+
+.container {
+    background-color: white;
+    width: 1150px;
+    height: 650px;
+    /* border: 1px solid #707070; */
+    margin: auto;
+    margin-top: 50px;
+    /* margin-bottom: 100px; */
+    display: flex;
+}
+.note-names {
+    /* background-color: red; */
+    border: 1px solid #707070;
+    flex: 1.1;
+    overflow: scroll;
+    border-right: none;
+}
+.note-area {
+    /* background-color: yellow; */
+    border: 1px solid #707070;
+    flex: 2.5;
+    overflow: scroll;
+}
+
+
+.search-bar{
+    background-color: white;
+    height: 50px;
+    border-bottom: 1px solid #707070;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#sticky{
+    /* position: fixed; */
+    /* top: 0;
+    width: 100%; */
+}
+
+.search
+{
+    width: 230px;
+    height: 27px;
+    border-radius: 70px;
+    border: 1px solid #707070;
+    padding-left: 10px;
+    color: #707070;
+    padding-top: 3px;
+}
+
+.btn
+{
+    color: #1C67BF;
+    position: relative;
+    top: 0;
+    left: -30px;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.fa-plus-square
+{
+    position: relative;
+    top: 0;
+    left: -10px;
+    font-size: 23px;
+}
+
+.add
+{
+    color: #1C67BF;
+    /* color: #f7bc1b; */
+    border: none;
+}
+
+
+.active
+{
+    height: 80px;
+    background-color: #F2F2F2;
+    border: none;
+    border-bottom: 1px solid #707070;
+}
+.note-1
+{
+    height: 80px;
+    border: none;
+    border-bottom: 1px solid #707070;
+}
+
+
+
+
+.icons-area
+{
+    background-color: white;
+    height: 50px;
+    border-bottom: 1px solid #707070;
+    display:flex;
+}
+.btn-icon
+{
+    background-color: white;
+    border: none;
+    margin-left: 20px;
+    font-size: 23px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #1C67BF;
+}
+
+.fa-trash-alt
+{
+    margin-left: 20px;
+}

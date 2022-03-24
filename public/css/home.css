@@ -1,0 +1,240 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica Neue, 'Courier New', Courier, monospace;
+}
+
+.container {
+    background-color: white;
+    width: 1000px;
+    min-height: 700px;
+    border: 1px solid #707070;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+.fline
+{
+    display: inline-flex;
+    margin-top: 30px;
+    /* background-color: red; */
+    width: 850px;
+    height: 40px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 70px;
+}
+
+.fline > p
+{
+    /* margin-right: 700px; */
+    font-size: 20px;
+    color: #707070;
+}
+
+.list-folder-names
+{
+    margin-left: 70px;
+}
+
+
+
+
+.ideas{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.idea
+{
+    width: 770px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    border: 1px solid #707070;
+    overflow: hidden;
+}
+.idea:hover
+{
+    background-color: #FFEEC3;
+    border: 1px solid black;
+    color: #707070;
+}
+
+.title
+{
+    color: black;
+    font-weight: 350;
+    font-size:18px;
+    padding: 10px;
+    float: left;
+}
+
+#icon
+{
+    color: grey;
+    font-size: 20px;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    top: -7px;
+}
+
+.fa-eye
+{
+    margin-right: 5px;
+}
+
+
+a > #icon:hover
+{
+    position: relative;
+    /* top: 15px; */
+}
+
+
+#open
+{
+    font-size: 30px;
+    cursor: pointer;
+    color: #F1CD66;
+}
+
+
+.fa-ellipsis-h
+{
+    margin-right: 20px;
+    float: right;
+}
+
+a
+{
+    text-decoration: none;
+    color: #707070;
+}
+a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* search area  */
+#search
+{
+    width: 300px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius:50px;
+    border: 1px solid #707070;
+    color: #4b4b4b;
+    font-size: 15px;
+}
+
+.btn{
+    color: #1C67BF;
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+}
+
+
+/* popup area for input the file name*/
+
+.popup{
+    background-color:white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-right: 20px;
+    width: 450px;
+    height: 350px;
+    position: relative;
+}
+
+#close
+{
+    background-color: white;
+    border: none;
+    color: #1C67BF;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.folder
+{
+    padding-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+
+#title
+{
+    width: 350px;
+    height: 35px;
+    border-radius:5px;
+    padding-left: 10px;
+    border: 1px solid #707070;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#note
+{
+    width: 350px;
+    min-height: 150px;
+    border-radius:5px;
+    padding: 15px;
+    border: 1px solid #707070;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: 16px;
+}
+
+
+#button
+{
+    width: 350px;
+    height: 30px;
+    border-radius:5px;
+    padding-left: 10px;
+    border: none;
+    background-color: #1C67BF;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup-container {
+    position: fixed;
+    top: -150px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.active  {
+    display: flex;
+}
+
+
+
+
+/* popup area for delete the file name*/
+
+
+
+
